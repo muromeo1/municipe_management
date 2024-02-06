@@ -24,3 +24,6 @@ Layout/LineLength:
 
 RSpec/MultipleMemoizedHelpers:
   Max: 15
+
+Rails/I18nLocaleTexts:
+  Enabled: false
