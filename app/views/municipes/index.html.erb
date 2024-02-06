@@ -1,0 +1,31 @@
+<h1>Munícipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome Completo</th>
+      <th>CPF</th>
+      <th>Email</th>
+      <th>Data de Nascimento</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @municipes.each do |municipe| %>
+      <tr>
+        <td><%= municipe.full_name %></td>
+        <td><%= municipe.cpf %></td>
+        <td><%= municipe.email %></td>
+        <td><%= municipe.birthdate.to_date.strftime('%d/%m/%Y') %></td>
+        <td><%= municipe.active ? 'Ativo' : 'Inativo' %></td>
+        <td>
+          <%= link_to 'Detalhes', municipe %>
+          <%#= link_to 'Editar', edit_municipe_path(municipe) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Novo Municipe', new_municipe_path %>

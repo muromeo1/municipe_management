@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :municipe do
     full_name { Faker::Name.name }
-    cpf { '74788787091' }
+    cpf { CPF.generate }
     cns { '192861210770009' }
-    email { Faker::Internet.email(name:) }
+    email { Faker::Internet.email(name: full_name) }
     birthdate { Faker::Date.birthday }
-    phone { Faker::PhoneNumber.cell_phone_number_with_country_code }
+    phone { Faker::PhoneNumber.cell_phone_with_country_code }
     photo { Faker::Internet.domain_name }
     active { true }
   end

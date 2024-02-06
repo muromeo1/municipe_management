@@ -6,7 +6,7 @@ class Municipe < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true,
                     format: {
-                      with: /\A[A-Za-z0-9+_.-]+@([A-Za-z0-9]+\.)+[A-Za-z]{2,6}$\z/,
+                      with: /\A(.+)@(.+)\z/,
                       message: 'invalid'
                     }
 
@@ -19,7 +19,7 @@ class Municipe < ApplicationRecord
   private
 
   def legit_cpf
-    errors.add(:cpf, 'invalid') unless CPF.valid?(cpf)
+    errors.add(:cpf, 'invalid') unless !!CPF.valid?(cpf)
   end
 
   def legit_cns

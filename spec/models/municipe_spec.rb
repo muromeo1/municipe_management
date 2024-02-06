@@ -50,7 +50,7 @@ RSpec.describe Municipe do
     end
 
     context 'when email is invalid' do
-      let(:email) { '_2@.com' }
+      let(:email) { 'A.a.com' }
 
       it { expect(errors[:email].first).to eq('invalid') }
     end
