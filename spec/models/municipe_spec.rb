@@ -14,7 +14,6 @@ RSpec.describe Municipe do
     it { expect(errors[:email].first).to eq("can't be blank") }
     it { expect(errors[:birthdate].first).to eq("can't be blank") }
     it { expect(errors[:phone].first).to eq("can't be blank") }
-    it { expect(errors[:photo].first).to eq("can't be blank") }
     it { expect(model.active).to be(true) }
   end
 

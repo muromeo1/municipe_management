@@ -9,7 +9,6 @@ module Municipes
              :email,
              :birthdate,
              :phone,
-             :photo,
              :active
 
     def call

@@ -6,7 +6,6 @@ FactoryBot.define do
     email { Faker::Internet.email(name: full_name) }
     birthdate { Faker::Date.birthday }
     phone { Faker::PhoneNumber.cell_phone_with_country_code }
-    photo { Faker::Internet.domain_name }
     active { true }
   end
 end

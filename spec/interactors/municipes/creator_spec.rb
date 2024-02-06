@@ -16,7 +16,6 @@ RSpec.describe Municipes::Creator, type: :interactor do
           email: 'bergnaum_hobert@kunze.example',
           birthdate: '1971-11-26',
           phone: '+682 1-373-077-8510',
-          photo: 'dibbert.test',
           active: true
         }
       end

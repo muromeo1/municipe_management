@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '3.2.2'
 
 gem 'cpf_cnpj'
+gem 'image_processing', '>= 1.2'
 gem 'interactor-rails', '~> 2.0'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'

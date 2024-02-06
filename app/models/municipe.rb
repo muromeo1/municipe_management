@@ -1,5 +1,8 @@
 class Municipe < ApplicationRecord
-  validates :full_name, :birthdate, :phone, :photo, presence: true
+  has_one :address, dependent: :destroy
+  has_one_attached :photo
+
+  validates :full_name, :birthdate, :phone, presence: true
 
   validates :cpf, presence: true, uniqueness: true
   validates :cns, presence: true, uniqueness: true, length: { is: 15 }
